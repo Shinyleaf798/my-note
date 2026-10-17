@@ -1,0 +1,37 @@
+#!/usr/bin/env bash
+# 提交前扫描新增内容里的禁用词(公司名、内部包 scope、内部服务名等)。
+# 词表 .githooks/blocklist.txt 本身不进版本库 —— 它才是最敏感的那个文件。
+# 启用: git config core.hooksPath .githooks
+#
+# 注意: 这里刻意不用 grep -i。部分 Windows 环境的 GNU grep 3.0 一加 -i 就 abort,
+# 而且 abort 的退出码会被当成"没匹配到",导致检查静默失效。改用 awk + tolower()。
+set -uo pipefail
+
+list=".githooks/blocklist.txt"
+[ -f "$list" ] || { echo "pre-commit: 没有 $list,跳过禁用词检查"; exit 0; }
+
+# 只看本次新增的行(+ 开头,排除 diff 头部的 +++)
+added="$(git diff --cached -U0 --no-color | grep '^+' | grep -v '^+++' || true)"
+[ -n "$added" ] || exit 0
+
+hits=0
+while IFS= read -r word; do
+  case "$word" in ''|'#'*) continue ;; esac
+  matched="$(printf '%s\n' "$added" \
+    | awk -v w="$word" 'BEGIN{ w=tolower(w) } index(tolower($0), w) { print; if (++n==3) exit }')"
+  if [ -n "$matched" ]; then
+    echo "pre-commit: 暂存内容里出现禁用词 → $word"
+    printf '%s\n' "$matched" | sed 's/^/    /'
+    hits=$((hits + 1))
+  fi
+done < "$list"
+
+if [ "$hits" -gt 0 ]; then
+  cat <<'MSG'
+
+提交已拦截。请把上述内容泛化(用 <placeholder> 代替)后再提交。
+确认是误报时用: git commit --no-verify
+MSG
+  exit 1
+fi
+exit 0

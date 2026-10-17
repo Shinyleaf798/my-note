@@ -1,0 +1,14 @@
+# 禁用词表模板。复制成 blocklist.txt 后按实际情况填。
+# 一行一个词,大小写不敏感,# 开头为注释。
+# blocklist.txt 不会被提交(见 .gitignore)。
+
+# 公司 / 客户名称
+# acme-corp
+
+# 内部 npm scope、仓库名
+# @acme
+# acme-monorepo
+
+# 内部服务名、数据库名、业务实体名
+# billing-gateway
+# tenant_subscription
