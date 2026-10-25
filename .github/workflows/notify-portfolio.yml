@@ -4,7 +4,7 @@
 # 配置步骤：
 #   1. 建一个 Personal Access Token
 #      - Fine-grained token，Repository access 选 Shinyleaf798/my-portfolio
-#      - 权限：Contents = Read-only，Actions = Read and write
+#      - 权限：Contents = Read and write（repository_dispatch 要的是这个，不是 Actions）
 #   2. 在本仓库 Settings → Secrets and variables → Actions
 #      新建 secret，名字 PORTFOLIO_DISPATCH_TOKEN，值为上面的 token
 #   3. 想先验证 token 通不通，用 Actions 页面的 "Run workflow" 手动跑一次
@@ -53,8 +53,8 @@ jobs:
             echo "--- 响应内容 ---"
             cat response.txt
             echo
-            echo "401/404 基本都是 token 问题：过期了、"
-            echo "Repository access 没选 my-portfolio、或者 Actions 权限不是 Read and write。"
+            echo "401/403/404 基本都是 token 问题：过期了、"
+            echo "Repository access 没选 my-portfolio、或者 Contents 权限不是 Read and write。"
             exit 1
           fi
 
