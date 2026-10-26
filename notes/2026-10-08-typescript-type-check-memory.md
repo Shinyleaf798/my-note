@@ -6,10 +6,23 @@ languages: ["TypeScript"]
 frameworks: ["Prisma"]
 tools: ["Docker", "CI/CD"]
 domains: ["后端", "DevOps"]
-tags: ["除错", "类型系统", "构建性能", "除错方法"]
+tags: ["除错", "类型系统", "构建"]
 ---
 
 # 一行型别签章吃掉 1GB——CI build 挂在 exit 137
+
+> **先看日志里有没有这几行:**
+>
+> ```
+> FATAL ERROR: Ineffective mark-compacts near heap limit
+> Allocation failed - JavaScript heap out of memory
+> ```
+>
+> **有** → 病因不是本篇讲的签章问题,照本篇做无效。那是 V8 自己的堆上限先到,
+> 成因是型别总量随 schema 成长、全 codebase 均匀分摊,程式码层面无解 ——
+> 看「同一个 exit 137,这次程式码救不了」(见文末「相关笔记」)。
+>
+> **没有**(只有一个光秃秃的 exit code) → 就是本篇。继续读。
 
 ## 问题
 
