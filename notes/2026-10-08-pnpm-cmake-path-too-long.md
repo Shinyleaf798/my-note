@@ -5,7 +5,7 @@ description: "pnpm 默认的非 hoisted 结构让 CMake 路径超长、Windows �
 frameworks: ["React Native", "Expo"]
 tools: ["pnpm", "CMake", "Gradle"]
 domains: ["移动端"]
-tags: ["踩坑", "构建配置", "依赖管理"]
+tags: ["踩坑", "构建", "依赖管理"]
 ---
 
 # React Native / Expo + pnpm + CMake 路径过深问题

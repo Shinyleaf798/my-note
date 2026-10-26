@@ -5,7 +5,7 @@ description: "useTranslations 只能在组件函数体或另一个 Hook 里调�
 languages: ["TypeScript"]
 frameworks: ["React", "next-intl"]
 domains: ["前端"]
-tags: ["概念", "i18n", "Hook"]
+tags: ["概念"]
 ---
 
 ## 先搞清楚:什么是"组件函数"?

@@ -6,7 +6,7 @@ languages: ["TypeScript"]
 frameworks: ["GraphQL", "Relay"]
 tools: ["pnpm", "GraphQL Code Generator"]
 domains: ["前端", "后端"]
-tags: ["流程", "codegen", "构建配置"]
+tags: ["流程", "构建"]
 ---
 
 ## 为什么会报错

@@ -4,7 +4,7 @@ date: 2026-10-08
 description: "stripe listen 要同时给 --api-key 和 --forward-to,否则监听的是错的账号、或事件只停在 terminal 进不到本地 server。"
 tools: ["Stripe CLI"]
 domains: ["后端"]
-tags: ["踩坑", "webhook", "本地开发"]
+tags: ["踩坑"]
 ---
 
 # Stripe Webhook 本地监听配置

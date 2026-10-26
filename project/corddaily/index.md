@@ -7,7 +7,8 @@ repoUrl: 'https://github.com/Shinyleaf798/CordDaily'
 languages: ["TypeScript", "JavaScript"]
 frameworks: ["React Native", "Expo", "Express", "Prisma"]
 domains: ["移动端", "前端", "后端"]
-tags: ["记账", "本地优先", "离线同步", "SQLite", "Neon", "Android"]
+tools: ["SQLite", "Neon"]
+tags: ["本地优先", "离线同步"]
 ---
 
 ## 这是什么

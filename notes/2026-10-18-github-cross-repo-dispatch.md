@@ -4,7 +4,7 @@ date: 2026-10-18
 description: "A 仓库 push 后通知 B 仓库重新构建。PAT 的权限范围要指向 B,但 secret 必须存在 A —— 存错地方 GitHub 不报错,只给你一个空字符串。"
 tools: ["GitHub Actions", "CI/CD"]
 domains: ["DevOps"]
-tags: ["踩坑", "认证授权"]
+tags: ["踩坑"]
 ---
 
 # 跨仓库触发 GitHub Actions:token 权限给谁、secret 存哪
