@@ -1,5 +1,6 @@
 ---
-title: "示例笔记 (格式参考, 可删除)"
+title: "示例笔记 (格式参考)"
+draft: true      # 格式参考, 不发布到站点
 date: 2026-01-01
 description: "这是一篇示例笔记, 仅用于展示 frontmatter 字段格式。"
 relatedProject: "corddaily"

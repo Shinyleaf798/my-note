@@ -3,3 +3,6 @@
 
 # 禁用词表本身不进版本库
 .githooks/blocklist.txt
+
+# 只给 Claude 看的本机说明
+CLAUDE.local.md
