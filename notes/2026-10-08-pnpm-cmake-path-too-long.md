@@ -3,9 +3,10 @@ title: "React Native / Expo + pnpm + CMake 路径过深问题"
 date: 2026-10-08
 description: "pnpm 默认的非 hoisted 结构让 CMake 路径超长、Windows 上 Android build 失败,解法是 node-linker=hoisted 并清掉 native 缓存。"
 frameworks: ["React Native", "Expo"]
-tools: ["pnpm", "CMake", "Gradle"]
+tools: ["pnpm"]
 domains: ["移动端"]
-tags: ["踩坑", "构建", "依赖管理"]
+kind: 踩坑
+tags: ["构建", "依赖管理"]
 ---
 
 # React Native / Expo + pnpm + CMake 路径过深问题

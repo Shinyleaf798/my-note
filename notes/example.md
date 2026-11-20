@@ -8,7 +8,8 @@ languages: ["TypeScript"]
 frameworks: ["React"]
 tools: ["pnpm"]
 domains: ["前端"]
-tags: ["概念", "示例"]
+kind: 概念
+tags: ["示例"]
 ---
 
 ## 这是一个二级标题

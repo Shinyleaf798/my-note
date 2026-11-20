@@ -3,9 +3,9 @@ title: "React Hook 的调用位置规则与可复用的翻译函数"
 date: 2026-10-08
 description: "useTranslations 只能在组件函数体或另一个 Hook 里调用;用自定义 Hook 在组件顶部换出一个普通函数,就能在回调里随便用。"
 languages: ["TypeScript"]
-frameworks: ["React", "next-intl"]
+frameworks: ["React"]
 domains: ["前端"]
-tags: ["概念"]
+kind: 概念
 ---
 
 ## 先搞清楚:什么是"组件函数"?

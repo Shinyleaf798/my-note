@@ -33,7 +33,8 @@ description: "一句话说明这篇讲什么"
 frameworks: ["React"]
 tools: ["Docker"]
 domains: ["前端"]
-tags: ["除错"]
+kind: 踩坑                          # 类型，每篇 1 个
+tags: ["构建"]                      # 主题，最多 2 个，没有就整行不写
 relatedNotes: ["2026-10-25-xxx"]   # 有关联才写
 ---
 
@@ -62,10 +63,11 @@ relatedNotes: ["2026-10-25-xxx"]   # 有关联才写
 | 字段 | 填什么 | 现有的值 |
 | --- | --- | --- |
 | `languages` | 编程语言 | TypeScript、JavaScript、Rust |
-| `frameworks` | 框架 & 库 | React、React Native、Next.js、Expo、Express、GraphQL、Relay、Prisma、next-intl、Astro、Kysely |
-| `tools` | 工具 & 平台 | pnpm、npm、Git、GitHub Actions、CI/CD、Docker、CMake、Gradle、Stripe CLI、GraphQL Code Generator、Claude Code、CLI、SQLite、Neon |
+| `frameworks` | 框架 & 库 | React、React Native、Next.js、Expo、Express、GraphQL、Relay、Prisma、Astro |
+| `tools` | 工具 & 平台 | pnpm、npm、Git、GitHub Actions、Docker、Stripe CLI、Claude Code、SQLite、Neon |
 | `domains` | 领域 | 前端、后端、移动端、DevOps、AI辅助开发、AI工程 |
-| `tags` | 笔记类型 + 关键词 | 类型：`概念` `除错` `踩坑` `流程` `面试` `资讯`<br>关键词：`依赖管理` `学习方法` `构建` `类型系统` `测试` `Git协作` `本地优先` `离线同步` |
+| `kind` | 笔记类型，每篇 1 个（只有笔记用） | `踩坑`、`概念`、`流程`、`方法` |
+| `tags` | 主题，最多 2 个 | `构建`、`依赖管理`、`类型系统`<br>项目页用：`本地优先`、`离线同步` |
 | `relatedNotes` | 相关笔记的文件名（不带 `.md`） | |
 | `draft` | `true` = 不发布 | |
 | `featured` | 项目页用，`true` = 放首页，并在 Projects 页显示成大卡片 | |
@@ -74,7 +76,9 @@ relatedNotes: ["2026-10-25-xxx"]   # 有关联才写
 | `coverFrame` | 项目页用，封面外框：`phone` = 手机，`browser` = 浏览器；不写 = 普通图片 | `phone`、`browser` |
 
 - 上面几栏的值会直接变成网站上的筛选按钮，先从现有的里挑，新增了回来补。
-- 只有一篇会用到的词不做标签。技术名放前四栏，不放 `tags`。
+- **`kind` 类型**每篇只选 1 个，会显示成 Notes 页最上面的标签页：`踩坑` = 遇到问题→原因→解法（排查过程也算）；`概念` = 讲清楚是什么、为什么；`流程` = 按步骤做一件事；`方法` = 思考或学习的方式。
+- **`tags` 主题**至少有 2 篇会用到才新增。只有一篇会用到的词不做标签。类型不要写进 `tags`。
+- **技术栏**只写这篇主要在讲的，每栏最多 3 个。顺带提到的工具写在正文里就好，站内搜索找得到。技术名放前四栏，不放 `tags`。
 
 ## 写错了会怎样
 

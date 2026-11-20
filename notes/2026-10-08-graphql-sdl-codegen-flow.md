@@ -4,9 +4,10 @@ date: 2026-10-08
 description: "改了 SDL 之后要重新生成聚合 schema、TS 类型与 Relay 文件,否则前端用的还是落后的产物;附手动命令与 watcher 做法。"
 languages: ["TypeScript"]
 frameworks: ["GraphQL", "Relay"]
-tools: ["pnpm", "GraphQL Code Generator"]
+tools: ["pnpm"]
 domains: ["前端", "后端"]
-tags: ["流程", "构建"]
+kind: 流程
+tags: ["构建"]
 ---
 
 ## 为什么会报错

@@ -2,9 +2,9 @@
 title: "理解一个系统:三层追问 + 六步拆解"
 date: 2026-10-25
 description: "会用不等于懂。学技术时追问到「为什么」和「取舍」,讲一个系统时按触发、流程、门槛、上线、出事、为什么六步走 —— 以 CI/CD 和 RAG 为例。"
-tools: ["CI/CD", "GitHub Actions"]
+tools: ["GitHub Actions"]
 domains: ["DevOps", "AI工程"]
-tags: ["概念", "学习方法"]
+kind: 方法
 ---
 
 # 理解一个系统:三层追问 + 六步拆解

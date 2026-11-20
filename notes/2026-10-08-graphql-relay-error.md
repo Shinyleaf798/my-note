@@ -5,7 +5,7 @@ description: 'GraphQL 的 throw、null 传播,与 Relay "No data returned" 错�
 languages: ["TypeScript"]
 frameworks: ["GraphQL", "Relay"]
 domains: ["前端", "后端"]
-tags: ["除错"]
+kind: 踩坑
 ---
 
 # GraphQL / Relay:throw Exception 与 "No data returned" 问题

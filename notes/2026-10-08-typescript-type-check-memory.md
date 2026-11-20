@@ -4,9 +4,10 @@ date: 2026-10-08
 description: "CI build 无声失败、exit code 137、日志里没有编译错误、本机却编得过。原因是参数标成一个巨大的型别,但函式只用到其中一小块,编译器还是把整个型别比了一遍。"
 languages: ["TypeScript"]
 frameworks: ["Prisma"]
-tools: ["Docker", "CI/CD"]
+tools: ["Docker"]
 domains: ["后端", "DevOps"]
-tags: ["除错", "类型系统", "构建"]
+kind: 踩坑
+tags: ["类型系统", "构建"]
 ---
 
 # 一行型别签章吃掉 1GB——CI build 挂在 exit 137

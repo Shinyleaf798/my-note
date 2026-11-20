@@ -3,10 +3,11 @@ title: "同一个 exit 137,这次程式码救不了——型别检查的内存�
 date: 2026-10-24
 description: "CI 又因为 exit 137 挂掉,但这次日志里多了一行 V8 自己的讯息。两种 exit 137 的解法相反。而且这次没有任何一段程式码能改到达标——把最贵的那段整个删光也只省 37 MB。"
 languages: ["TypeScript"]
-frameworks: ["Prisma", "Kysely"]
-tools: ["Docker", "CI/CD"]
+frameworks: ["Prisma"]
+tools: ["Docker"]
 domains: ["后端", "DevOps"]
-tags: ["除错", "类型系统", "构建"]
+kind: 踩坑
+tags: ["类型系统", "构建"]
 relatedNotes: ["2026-10-08-typescript-type-check-memory"]
 ---
 
